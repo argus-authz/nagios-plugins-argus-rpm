@@ -62,6 +62,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc LICENSE COPYRIGHT README.md CHANGELOG
 
 %changelog
+* Thu Nov 29 2012 Valery Tschopp <valery.tschopp@switch.ch> 1.1.0-1
+- Upstream version 1.1.0 for EMI-3.
+
 * Fri Aug 3 2012 Valery Tschopp <valery.tschopp@switch.ch> 1.0.1-1
 - Self managed packaging with spec file.
 
