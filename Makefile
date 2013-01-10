@@ -21,10 +21,11 @@ name = nagios-plugins-argus
 version = 1.1.0
 release = 1
 
+dist_url = http://argus-authz.github.com/$(name)/distrib/$(name)-$(version).tar.gz
+
 git_url = https://github.com/argus-authz/$(name).git
 git_branch = EMI-3
 
-dist_url = https://github.com/downloads/argus-authz/$(name)/$(name)-$(version).tar.gz
 spec_file = fedora/$(name).spec
 
 rpmbuild_dir = $(CURDIR)/rpmbuild
@@ -34,7 +35,6 @@ all: srpm
 clean:
 	@echo "Cleaning..."
 	rm -rf $(rpmbuild_dir) $(spec_file) *.rpm $(name)
-
 
 spec:
 	@echo "Setting version and release in spec file: $(version)-$(release)"
