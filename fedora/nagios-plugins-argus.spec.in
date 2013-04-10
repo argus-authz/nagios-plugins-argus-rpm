@@ -57,11 +57,16 @@ rm -rf $RPM_BUILD_ROOT
 %{_libexecdir}/grid-monitoring/probes/%{name}/framework/TrafficProbe.py
 %{_libexecdir}/grid-monitoring/probes/%{name}/framework/Version.py
 
+%defattr(-,nagios,nagios,-)
 %dir /var/lib/grid-monitoring/%{name}
 
 %doc LICENSE COPYRIGHT README.md CHANGELOG
 
 %changelog
+* Wed Apr 10 2013 Valery Tschopp <valery.tschopp@switch.ch> 1.1.0-2
+- Fix ownership nagios:nagios for the pickle directory
+  /var/lib/grid-monitoring/nagios-plugins-argus.
+
 * Thu Nov 29 2012 Valery Tschopp <valery.tschopp@switch.ch> 1.1.0-1
 - Upstream version 1.1.0 for EMI-3.
 

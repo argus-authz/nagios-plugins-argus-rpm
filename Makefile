@@ -19,7 +19,7 @@
 #
 name = nagios-plugins-argus
 version = 1.1.0
-release = 1
+release = 2
 
 dist_url = http://argus-authz.github.com/$(name)/distrib/$(name)-$(version).tar.gz
 
@@ -34,7 +34,7 @@ all: srpm
 
 clean:
 	@echo "Cleaning..."
-	rm -rf $(rpmbuild_dir) $(spec_file) *.rpm $(name)
+	rm -rf $(rpmbuild_dir) $(spec_file) *.rpm *.tar.gz $(name)
 
 spec:
 	@echo "Setting version and release in spec file: $(version)-$(release)"
